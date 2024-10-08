@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://grosssalary/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://grosssalary/">
+
+<xs:element name="CalculateDA" type="tns:CalculateDA"/>
+
+<xs:element name="CalculateDAResponse" type="tns:CalculateDAResponse"/>
+
+<xs:element name="CalculateGross" type="tns:CalculateGross"/>
+
+<xs:element name="CalculateGrossResponse" type="tns:CalculateGrossResponse"/>
+
+<xs:element name="CalculateHRA" type="tns:CalculateHRA"/>
+
+<xs:element name="CalculateHRAResponse" type="tns:CalculateHRAResponse"/>
+
+<xs:complexType name="CalculateHRA">
+<xs:sequence>
+<xs:element name="Salary" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateHRAResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateDA">
+<xs:sequence>
+<xs:element name="Salary" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateDAResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateGross">
+<xs:sequence>
+<xs:element name="Salary" type="xs:int"/>
+<xs:element name="DA" type="xs:double"/>
+<xs:element name="HRA" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateGrossResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
